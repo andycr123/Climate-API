@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import {useFetch}  from './Hooks/useFetch'
+import {WeatherInterface} from './Components/WeatherInterface'
 
 function App() {
+  const {data, isLoading} = useFetch(`https://api.openweathermap.org/data/2.5/weather?q=Barranquilla&appid=bbba429e9f1cc3cd79fa16b38ea8b050`)
+
+  if(isLoading) return <>Loading</>
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <WeatherInterface weatherData={data}/>
     </div>
   );
 }
