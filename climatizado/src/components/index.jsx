@@ -7,7 +7,6 @@ export const WeatherInterface = ({ weatherData }) => {
         <div className="weatherbox">
             <div className="weatherbox-information">
             <span className="title">Weather API</span>
-                    <img src="https://cdn-icons-png.flaticon.com/512/984/984585.png" className="image"></img>
                     <div className="weatherbox-information__principal">
                         <span className="weatherbox-information__temperature">
                             {celciusTemp}<span className="temperature-icon">°</span>

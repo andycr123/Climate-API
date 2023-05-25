@@ -56,13 +56,6 @@ label
     position: relative;
     top: 55px;
 }
-.image
-{
-    position: relative;
-    top: 63px;
-    width: 130px;
-    height: 130px;
-}
 
 .weatherbox-information__cityname
 {
